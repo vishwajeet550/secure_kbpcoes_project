@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Entry System</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    /* font-family: sans-serif; */
+    }
+    @media screen 
+        and (min-width: 1024px)
+        and (max-device-width: 3260px)
+        /* and (min-device-height: 4000px) */
+        and (-webkit-min-device-pixel-ratio: 1) 
+        { 
+    .image img{
+        object-fit: fill;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+    }
+    .navbar{
+        position: absolute;
+        top: 1%;
+        width: 98%;
+        margin-top: 0%;
+        margin-left: 10px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        
+    }
+    .logo{
+        width: 100px;
+        border-radius: 10px;
+    }
+    .navbar ul li{
+        border: 2px solid white;
+        /* border: 3px solid black;
+        border-color: black; */
+        border-radius: 10px;
+        margin: 5px 5px;
+        list-style: none;
+        display: inline-block;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 28px;
+        text-decoration: none;
+        background-color: lightblue;
+        opacity: 0.75;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: maroon;
+    }
+    .navbar ul li:hover{
+        opacity: 0.9;
+    }
+    .navbar ul li a:hover, .navbar li a::after{
+        width: 100%;
+        text-decoration: underline;
+        color: blue;
+        transition: 0.5s;
+    }
+    .title{
+        font-family: 'Libre Baskerville', serif;
+        /* border: 3.5px solid darkgreen; */
+        border-radius: 10px;
+        position: absolute;
+        /* width: 100rem; */
+        top: 50%;
+        /* left: 5%; */
+        margin: 0 25px;
+        font-size: 60px;
+        padding: 10px 10px;
+        text-align: center;
+        color: red;
+        background-color: lightblue;
+        opacity: 0.7;
+    }
+    .title:hover{
+        opacity: 0.9;
+    }
+    }
+    @media screen and (min-width: 90px) and (max-width: 1024px) 
+    and (min-device-height: 450px) and (max-device-height: 1366px)  
+    and (orientation: portrait) 
+    {
+    .image img{
+        object-fit: fill;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+    }
+    .navbar{
+        position: absolute;
+        top: 1%;
+        width: 98%;
+        margin-top: 0%;
+        margin-left: 10px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;     
+    }
+    .logo{
+        width: 80px;
+        border-radius: 10px;
+    }
+    .navbar ul{
+        /* width: 150px; */
+        text-align: right;   
+        padding-right: 2%;
+    }
+    .navbar ul li{
+        border: 2px solid white;
+        border-radius: 10px;
+        margin: 3px;
+        margin-left: 50%;
+        list-style: none;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        background-color: lightblue;
+        opacity: 0.75;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: darkred;
+    }
+    .navbar ul li:hover{
+        opacity: 0.9;
+    }
+    .navbar ul li a:hover, .navbar li a::after{
+        width: 100%;
+        text-decoration: underline;
+        color: blue;
+        transition: 0.5s;
+    }
+    .title{
+        font-family: 'Libre Baskerville', serif;
+        /* border: 3.5px solid darkgreen; */
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        right: 2%;
+        font-size: 25px;
+        text-align: center;
+        padding: 10px 40px;
+        color: red;
+        background-color: lightblue;
+        opacity: 0.7;
+    }
+    .title:hover{
+        opacity: 0.9;
+    }
+    }
+    @media (min-width: 500px) and (max-width: 1024px) and (min-device-height: 200px) 
+        and (max-device-height: 811px)  and (orientation: landscape) 
+        {
+    .image img{
+        object-fit: fill;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+    }
+    .navbar{
+        position: absolute;
+        top: 1%;
+        width: 98%;
+        margin-top: 0%;
+        margin-left: 10px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        
+    }
+    .logo{
+        width: 80px;
+        border-radius: 10px;
+    }
+    .navbar ul li{
+        border: 2px solid white;
+        /* border: 3px solid black;
+        border-color: black; */
+        border-radius: 10px;
+        margin: 2px 2px;
+        /* left: 0%; */
+        list-style: none;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        background-color: lightblue;
+        opacity: 0.75;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: darkred;
+    }
+    .navbar ul li:hover{
+        opacity: 0.9;
+    }
+    .navbar ul li a:hover, .navbar li a::after{
+        width: 100%;
+        text-decoration: underline;
+        color: blue;
+        transition: 0.5s;
+    }
+    .title{
+        font-family: 'Libre Baskerville', serif;
+        /* border: 3.5px solid darkgreen; */
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        right: 2%;
+        font-size: 25px;
+        text-align: center;
+        padding: 10px 10px;
+        color: red;
+        background-color: lightblue;
+        opacity: 0.7;
+
+    }
+    .title:hover{
+        opacity: 0.9;
+    }
+    }
+</style>  
+</head>
+<body>
+    <div class="image">
+    <img src="back.jpg">
+    </div>
+    <header class="header1">
+        <div class="navbar">
+            <img src="logo.jpg" class="logo" usemap="#workmap">
+            <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="mailto: vishwajeetkadam14@gmail.com"> </map>
+            <ul>
+            <li><a href="working.html"><b> About us</a></li>
+            <li><a href="list-clg.html"> Dashboard</a></li>
+            
+            <li><a href="working.html"> Contact Us</b></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="title"><i>Automatically opening door with Face Recognition and Temperature Detecting Device</i>
+    </div>
+</body>
+</html>
